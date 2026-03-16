@@ -1,0 +1,24 @@
+{
+  "experiment_name": "sac_rs_base_200k",
+  "algorithm": "sac",
+  "train": {
+    "total_steps": 200000,
+    "seed": 1,
+    "batch_size": 128
+  },
+  "env": {
+    "env_id": "dmcartpole_swingup",
+    "frame_stack": 3,
+    "image_size": 84,
+    "action_repeat": 2
+  },
+  "augmentation": {
+    "name": "random_shift",
+    "pad": 4
+  },
+  "evaluation": {
+    "eval_interval": 5000,
+    "eval_episodes": 10,
+    "survival_threshold": 0.8
+  }
+}
