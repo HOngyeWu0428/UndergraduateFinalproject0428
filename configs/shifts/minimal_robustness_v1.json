@@ -1,0 +1,33 @@
+{
+  "description": "Minimal dissertation robustness suite (first pass)",
+  "spatial": {
+    "gaussian_noise": [
+      {"severity": 1, "sigma": 8.0},
+      {"severity": 2, "sigma": 16.0}
+    ],
+    "color_distortion": [
+      {"severity": 1, "brightness": 8.0, "contrast": 0.9},
+      {"severity": 2, "brightness": 16.0, "contrast": 0.8}
+    ]
+  },
+  "temporal": {
+    "frame_freeze": [
+      {"severity": 1, "freeze_prob": 0.1},
+      {"severity": 2, "freeze_prob": 0.2}
+    ],
+    "frame_delay": [
+      {"severity": 1, "delay_k": 1},
+      {"severity": 2, "delay_k": 2}
+    ]
+  },
+  "physics": {
+    "friction_scale": [
+      {"severity": 1, "scale": 1.2},
+      {"severity": 2, "scale": 1.5}
+    ],
+    "mass_scale": [
+      {"severity": 1, "scale": 1.2},
+      {"severity": 2, "scale": 1.5}
+    ]
+  }
+}
